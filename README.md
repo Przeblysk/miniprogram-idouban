@@ -7,4 +7,4 @@
 
 
 ## 界面展示
-![](http://p2wtdudqn.bkt.clouddn.com/miniprogram-idouban.gif)
+[gif展示 图片太大了github显示不出来 直接放了外链 点击就好](http://p2wtdudqn.bkt.clouddn.com/miniprogram-idouban.gif)
