@@ -1,0 +1,86 @@
+<import src="../../template/start.wxml" />
+
+<view class='wapper'>
+  <view class='mask'></view>
+  <image class='back-cover' mode='aspectFill' src='{{subject.images.large}}'></image>
+  <image class='cover' mode='widthFix' src='{{subject.images.small}}'></image>
+  <view class='info'>
+    <view>{{subject.title}}</view>
+    <view>{{subject.original_title}}</view>
+    <view class='rating'>
+      <text class='score' wx:if='{{subject.rating.average == 0}}'>无</text>
+      <text class='score' wx:else>{{subject.rating.average}}</text>
+      <view>
+        <template is="start" data="{{stars:subject.start}}" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='introduction'>
+  <view class='title'>{{subject.title}}的简介</view>
+  <view>
+    {{subject.summary}}
+  </view>
+  <view class='detail'>
+    <view>
+      <text style='padding-right: 20rpx;'>{{subject.durations}}</text>
+      <view wx:for="{{subject.genres}}" wx:key="index" style='display:inline-block'>
+        <text wx:if='{{index !== 0}}'>/</text> {{item}}
+      </view>
+
+    </view>
+    <view style='padding-right: 20rpx;'>
+      {{subject.mainland_pubdate}}(中国大陆)上映 {{subject.countries}}
+    </view>
+    <view>
+      <text wx:for="{{subject.directors}}" wx:key="index">
+        {{item.name}}（导演）
+     </text>
+      <view wx:for="{{subject.casts}}" wx:key="index" style='display:inline-block'>
+        <text wx:if='{{index !== 0}}'>/</text> {{item.name}}
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class='trailer-list'>
+  <view class='title'>预告片</view>
+  <video class='trailer-item' wx:for='{{subject.trailer_urls}}' wx:key='index' src="{{item}}" controls></video>
+</view>
+
+<view class='comments'>
+  <view class='title'>短评({{subject.comments_count}})</view>
+  <view class='comments-list'>
+    <view class='comments-item' wx:for='{{comments}}' wx:key='index'>
+      <view>
+        <image class='avatar' mode='widthFix' src='{{item.author.avatar}}'></image>
+      </view>
+      <view style='padding-left: 40rpx'>
+        <view class='stars'>
+          <template is="start" data="{{stars:item.start}}" />
+        </view>
+        <view class='time'>{{item.created_at}}</view>
+        <view class='comment'>{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='more-comments' bindtap='toMoreComment'>查看更多短评</view>
+</view>
+
+<view class='reviews'>
+  <view class='title'>影评({{subject.reviews_count}})</view>
+  <view class='reviews-list'>
+    <view class='reviews-item {{index !=0 ? "border-t":""}}' wx:for='{{reviews}}' wx:key='index' bindtap='toReviewDetail' data-id='{{item.id}}'>
+      <view class='review'>{{item.title}}</view>
+      <view class='stars'>
+        <text class='name'>{{item.author.name}}</text>
+        <template is="start" data="{{stars:item.start}}" />
+      </view>
+      <view class='useful'>{{item.created_at}}</view>
+        
+    </view>
+  </view>
+  <view class='more-reviews' bindtap='toMoreReview'>查看更多影评</view>
+</view>

@@ -1,0 +1,82 @@
+<import src="../../template/start.wxml" />
+<!-- 正在热映 -->
+<view class='content'>
+  <view class='in-theaters-bar'>
+    <view class='title'>正在热映</view>
+    <view class='more' bindtap='toMoreInteaters'>更多</view>
+    <image class='arrow-icon' src='/images/arrow.png'></image>
+  </view>
+  <scroll-view scroll-x>
+    <view class='in-theaters-list'>
+      <view class='in-theaters-item' wx:for='{{inTheaters}}' wx:key='{{index}}' bindtap='toDetail' data-id='{{item.id}}'>
+
+        <image lazy-load='true' src='{{item.images.small}}' mode='aspectFill'></image>
+        <view class='title'>{{item.title}}</view>
+        <!-- <view class='original_title'>Jurassic World: Fallen Kingdom</view> -->
+        <view class='score-content'>
+          <template is="start" data="{{stars:item.start}}" />
+          <text class='score' wx:if='{{item.rating.average == 0}}'>无</text>
+          <text class='score' wx:else>{{item.rating.average}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='loading' wx:if='{{inTheatersLoadding}}'>
+    <image mode='widthFix' src='../../images/loading.svg'></image>
+  </view>
+</view>
+
+
+<!-- 即将上映 -->
+<view class='content'>
+  <view class='in-theaters-bar'>
+    <view class='title'>即将上映</view>
+    <view class='more' bindtap='toMoreComingSoon'>更多</view>
+    <image class='arrow-icon' src='/images/arrow.png'></image>
+  </view>
+  <scroll-view scroll-x>
+    <view class='in-theaters-list'>
+      <view class='in-theaters-item' wx:for='{{comingSoon}}' wx:key='{{index}}' bindtap='toDetail' data-id='{{item.id}}'>
+
+        <image lazy-load='true' src='{{item.images.small}}' mode='aspectFill'></image>
+        <view class='title'>{{item.title}}</view>
+        <!-- <view class='original_title'>Jurassic World: Fallen Kingdom</view> -->
+        <view class='score-content'>
+          <template is="start" data="{{stars:item.start,score:item.rating.average}}" />
+          <text class='score' wx:if='{{item.rating.average == 0}}'>无</text>
+          <text class='score' wx:else>{{item.rating.average}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='loading' wx:if='{{comingSoonLoadding}}'>
+    <image mode='widthFix' src='../../images/loading.svg'></image>
+  </view>
+</view>
+
+<!-- top250 -->
+<view class='content'>
+  <view class='in-theaters-bar'>
+    <view class='title'>Top250</view>
+    <view class='more' bindtap='toMoreTop'>更多</view>
+    <image class='arrow-icon' src='/images/arrow.png'></image>
+  </view>
+  <scroll-view scroll-x>
+    <view class='in-theaters-list'>
+      <view class='in-theaters-item' wx:for='{{top250}}' wx:key='{{index}}' bindtap='toDetail' data-id='{{item.id}}'>
+
+        <image lazy-load='true' src='{{item.images.small}}' mode='aspectFill'></image>
+        <view class='title'>{{item.title}}</view>
+        <!-- <view class='original_title'>Jurassic World: Fallen Kingdom</view> -->
+        <view class='score-content'>
+          <template is="start" data="{{stars:item.start,score:item.rating.average}}" />
+          <text class='score' wx:if='{{item.rating.average == 0}}'>无</text>
+          <text class='score' wx:else>{{item.rating.average}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='loading' wx:if='{{top250Lodding}}'>
+    <image mode='widthFix' src='../../images/loading.svg'></image>
+  </view>
+</view>

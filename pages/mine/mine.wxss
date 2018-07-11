@@ -1,0 +1,24 @@
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.top image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  border: 1px solid rgba(233, 233, 233, 0.5);
+}
+
+.tip {
+  position: absolute;
+  font-size: 20rpx;
+  z-index: 10;
+}

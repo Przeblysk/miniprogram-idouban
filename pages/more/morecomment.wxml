@@ -1,0 +1,21 @@
+<import src="../../template/start.wxml" />
+<view class='comments'>
+  <view class='comments-item' wx:for='{{comments}}' wx:key='{{index}}'>
+    <image class='avatar' src='{{item.author.avatar}}' mode='widthFix'></image>
+    <view class='content'>
+      <view class='content-name'>
+        <text class='author-name'>{{item.author.name}}</text>
+        <template is="start" data="{{stars:item.stars}}" />
+      </view>
+      <view class='content-time'>
+      {{item.created_at}}
+      </view>
+      <view class='content-comment'>
+      {{item.content}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class='loading' hidden='{{nomore}}'>
+  <image mode='widthFix' src='../../images/loading.svg'></image>
+</view>

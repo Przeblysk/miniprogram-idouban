@@ -1,0 +1,6 @@
+<view class='top'>
+  <button class='auth' open-type="{{userInfoAuth !== 2 ? 'getUserInfo' : ''}}" lang="zh_CN" bindgetuserinfo="onGotUserInfo" plain='true'>
+     <image src='{{userInfo.avatarUrl}}'></image> 
+  </button>
+   <view class='tip' wx:if='{{!hasInfo}}'>点击获取微信头像</view>
+</view>

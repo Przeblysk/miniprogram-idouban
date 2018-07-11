@@ -1,0 +1,180 @@
+@import "../../template/start.wxss";
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.wapper {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  color: #fff;
+}
+
+.wapper .mask {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.8;
+  width: 100%;
+  height: 400rpx;
+  z-index: -1;
+}
+
+.wapper .back-cover {
+  position: absolute;
+  width: 100%;
+  height: 400rpx;
+  z-index: -2;
+}
+
+.cover {
+  position: absolute;
+  width: 30% !important;
+  left: 30rpx;
+  bottom: -50rpx;
+}
+
+.info {
+  position: absolute;
+  right: 50rpx;
+  bottom: 0rpx;
+  width: 400rpx;
+  height: 250rpx;
+  font-size: 40rpx;
+}
+
+.info .rating {
+  display: flex;
+  align-items: center;
+}
+
+.score {
+  color: #ffd33b;
+  padding-right: 20rpx;
+  font-size: 46rpx;
+}
+
+.introduction {
+  padding: 70rpx 20rpx 20rpx 20rpx;
+  font-size: 24rpx;
+  opacity: 0.7;
+}
+
+.introduction text {
+  display: inline-block;
+}
+
+.introduction .title {
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+  opacity: 0.6;
+}
+
+.introduction .detail {
+  padding-top: 20rpx;
+}
+
+.trailer-list {
+  text-align: center;
+}
+
+.trailer-list .title {
+  opacity: 0.7;
+  padding-bottom: 20rpx;
+}
+
+.trailer-item {
+}
+
+.comments .title {
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+  opacity: 0.6;
+}
+
+.comments-list {
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-item {
+  display: flex;
+  padding-bottom: 40rpx;
+}
+
+.comments-item .avatar {
+  width: 100rpx;
+  border-radius: 50%;
+}
+
+.comments-item .stars-container {
+  justify-content: flex-start;
+}
+
+.comments-item .time {
+  font-size: 20rpx;
+  opacity: 0.6;
+}
+
+.comments-item .comment {
+  font-size: 26rpx;
+  opacity: 0.6;
+}
+
+.more-comments {
+  text-align: center;
+  font-size: 30rpx;
+  color: #ffd33b;
+  padding-bottom: 30rpx;
+}
+
+.reviews .title {
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+  opacity: 0.6;
+}
+
+.reviews-list {
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  font-size: 30rpx;
+  opacity: 0.8;
+}
+
+.reviews-item {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.border-t {
+  border-top: 1px solid rgba(233, 233, 233, 0.7);
+}
+
+.reviews-item .stars-container {
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.reviews-item .name {
+  font-size: 24rpx;
+  opacity: 0.7;
+  padding-right: 20rpx;
+}
+
+.more-reviews {
+  text-align: center;
+  font-size: 30rpx;
+  color: #ffd33b;
+  padding-bottom: 30rpx;
+}

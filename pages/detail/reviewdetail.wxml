@@ -1,0 +1,18 @@
+<import src="../../template/start.wxml" />
+<view class='title'>{{review.title}}</view>
+
+<view class='avatarname'>
+  <image class='avatar' src='{{review.author.avatar}}' mode='widthFix'> </image>
+  <view class='name'>
+  {{review.author.name}}
+  <template is="start" data="{{stars:review.stars}}" />
+  </view>
+  
+</view>
+<view class='time'>
+{{review.updated_at}} 有用:{{review.useful_count}}
+</view>
+
+<view class='content'>
+{{review.content}}
+</view>

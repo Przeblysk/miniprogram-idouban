@@ -1,0 +1,52 @@
+@import "../../template/start.wxss";
+.in-theaters-list-items {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.in-theaters-item {
+  display: flex;
+  width: 33%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 20rpx;
+}
+
+.in-theaters-item image {
+  width: 200rpx;
+  height: 300rpx;
+}
+
+.in-theaters-item .title {
+  padding-top: 20rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  opacity: 0.8;
+}
+
+.score-content {
+  display: flex;
+  align-items: center;
+}
+
+.score {
+  font-size: 24rpx;
+  color: #ffd33b;  
+}
+
+.loading {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading image {
+  width: 50rpx;
+}

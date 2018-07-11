@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/mine/mine",
+    "pages/more/moreintheaters",
+    "pages/more/morecomeing",
+    "pages/more/moretop",
+    "pages/more/morecomment",
+    "pages/more/morereview",
+    "pages/detail/reviewdetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Douban",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a0a0a0",
+    "selectedColor": "#ffd33b",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/index.png",
+        "selectedIconPath": "/images/index-ac.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/mine.png",
+        "selectedIconPath": "/images/mine-ac.png"
+      }
+    ]
+  }
+}

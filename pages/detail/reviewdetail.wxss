@@ -1,0 +1,37 @@
+@import "../../template/start.wxss";
+
+.stars-container {
+  justify-content: flex-start;
+}
+
+
+.title {
+  font-size: 50rpx;
+  opacity: 0.8;
+}
+.avatarname {
+  display: flex;
+  align-items: center;
+  padding: 5rpx 20rpx;
+}
+.avatar {
+ width: 100rpx;
+ border-radius: 50%;
+}
+.name {
+  padding-left: 20rpx;
+  font-size: 26rpx;
+  opacity: 0.6;
+}
+.time {
+  padding-left: 20rpx;
+  font-size: 26rpx;
+  opacity: 0.6;
+  padding-bottom: 20rpx;
+}
+
+.content {
+  padding:0 20rpx;
+  font-size: 30rpx;
+  opacity: 0.7;
+}
